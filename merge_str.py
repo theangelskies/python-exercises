@@ -40,3 +40,35 @@
 
 # 1 <= word1.length, word2.length <= 100
 # word1 and word2 consist of lowercase English letters.
+
+# solution
+# We have two strings and we want to return and merge it in such a way that we take one of each of each until we append the  last part of the longer sting if need.
+# we are going to create an empty string that takes in the answer
+# we are now going to compare both strings to know which has the longer length
+# traverse and do not exceed the max length
+# if i is  less than length of the first string return result += extra letters
+# if i is less than length of the second string return result += extra letters
+
+
+class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        result = ""
+        max_length= max(len(word1), len(word2))
+        for i in range(max_length):
+            if i < len(word1):
+                result += word1[i] 
+            if i < len(word2):
+                result += word2[i]
+        return result 
+        
+
+
+# Merge two strings by taking one letter from each in turn;
+# leftover letters of the longer string end up at the end.
+# Create an empty string to hold the answer.
+# Find the larger of the two lengths.
+# Loop i from 0 up to (but not including) that length.
+#   If i is less than the length of word1, add word1's letter at i to the result.
+#   If i is less than the length of word2, add word2's letter at i to the result.
+# After the loop, return the result.
+
