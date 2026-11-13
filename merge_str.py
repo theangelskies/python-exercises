@@ -61,14 +61,3 @@ class Solution:
                 result += word2[i]
         return result 
         
-
-
-# Merge two strings by taking one letter from each in turn;
-# leftover letters of the longer string end up at the end.
-# Create an empty string to hold the answer.
-# Find the larger of the two lengths.
-# Loop i from 0 up to (but not including) that length.
-#   If i is less than the length of word1, add word1's letter at i to the result.
-#   If i is less than the length of word2, add word2's letter at i to the result.
-# After the loop, return the result.
-
